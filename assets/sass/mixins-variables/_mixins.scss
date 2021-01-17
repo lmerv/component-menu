@@ -1,0 +1,34 @@
+// #################################################################
+// MEDIA QUERIES
+// #################################################################
+// Phone
+@mixin sm {
+  @media screen and (min-width: 576px) {
+      @content;
+  }
+}
+// Tablet
+@mixin md {
+  @media screen and (min-width: 768px) {
+      @content;
+  }
+}
+// Desktop
+@mixin lg {
+  @media screen and (min-width: 992px) {
+      @content;
+  }
+}
+// Desktop Large
+@mixin xl {
+  @media screen and (min-width: 1200px) {
+      @content;
+  }
+}
+
+// Desktop X-Large
+@mixin xxl {
+  @media screen and (min-width: 1440px) {
+      @content;
+  }
+}

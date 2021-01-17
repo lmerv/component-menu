@@ -1,11 +1,9 @@
 
-[role=navigation] {
+nav.navigation {
   display: flex;
   flex: wrap;
-  background-color: var(--black);
+  background-color: inherit;
   width: 100%;
-  
-  border-bottom: 1px solid var(--gray-8);
 
   ul.navigation__menu {
     display: flex;
@@ -27,17 +25,12 @@
         text-transform: uppercase;
 
         &:hover {
-          color: var(--gray-5);
+          color: var(--gray-3);
         }
       }
 
     }
   }
-
-  // .navigation__menu.open-menu {
-  //   height: 0vh;
-  //   background-color: var(--red);
-  // }
 
   .navigation__icon {
     padding: {
@@ -50,8 +43,8 @@
 
 }
 
-@media screen and (min-width: 768px) {
-  [role=navigation] {
+@include md {
+  nav.navigation {
     align-items: center;
     height: clamp(8vh, 5px, 10vh);
 

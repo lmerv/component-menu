@@ -4,16 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Permanence juridique du Sud fribourgeois Sàrl</title>
+    <title>Composant Menu</title>
     <meta name="description" content="Consultation sans rendez-vous du lundi au samedi : droit de la famille (séparation, divorces); successions; droit du travail; droit du bail; assurances; accidents de la circulation; retrait de permis de conduire; autorisations de séjour en suisse; droit de voisinage; aménagement du territoire (opposition); défauts de construction; permis de construire; droit pénal; droit administratif; poursuites; recouvrement ou contestation de créances.">
     <meta name="author" content="Permanence juridique du Sud fribourgeois Sàrl" >
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/main.js"></script>
-
-    <link rel="manifest" href="/manifest.json">
-    <meta name="application-name" content="pjsf">        
-    <link rel="shortcut icon" href="./favicon.png">
   </head>
   <body>
     <!-- some svg -->
@@ -53,7 +49,11 @@
     </svg>
     <!-- // -->
 
-    <nav role="navigation">
+    <header class="banner">
+      <p>Hello world</p>
+    </header>
+
+    <nav class="navigation">
       <div class="navigation__icon">
         <div id="burger-open">
           <svg class="icon icon--menu"  viewBox="0 0 24 24" >
@@ -67,115 +67,27 @@
         </div>
 
       </div>
-      <ul id="menu-nav" class="navigation__menu">
-        <li><a href="#activites">Activités</a></li>
-        <li><a href="#horaires">horaires</a></li>
-        <li><a href="#adresse">adresse</a></li>
-        <li><a href="mailto:info@pjsf.ch">info@pjsf.ch</a></li>
+      <ul class="navigation__menu">
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item has-submenu">
+          <a tabindex="0">Services</a>
+          <ul class="submenu">
+            <li class="subitem"><a href="#">Design</a></li>
+            <li class="subitem"><a href="#">Development</a></li>
+            <li class="subitem"><a href="#">SEO</a></li>
+            <li class="subitem"><a href="#">Copywriting</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
-    <header role="banner">
-      <figure class="banner__image">
-        <img src="assets/images/logo.jpg" alt="Permanence juridique du Sud fribourgeois Sàrl">
-      </figure>
-      <div class="banner__body">
-        <p>Vous cherchez une réponse rapide à un problème légal ?</p>
-        <p>Un avocat pour vous conseiller, pour vous aider ...</p>
-      </div>
-      <div class="banner__links">
-        <a href="mailto:info@pjsf.ch">info@pjsf.ch</a>
-        <a href="tel:+41269121925">Tel : +41 26 912 19 25</a>
-      </div>                        
-    </header>
-
-    <main role="main">
-        <section>
-            <article id="activites" class="article__desc">
-                <h1>Consultation juridique sans rendez-vous</h1>
-                <h2>CHF 50.- la consultation de 30 minutes</h2>            
-                <h3>Nous vous conseillons dans tous les domaines, notamment:</h3>
-                <p>Droit de la famille (séparation, divorces), successions, droit du travail, droit du bail, assurances, accidents de la circulation, retrait de permis de conduire, autorisations de séjour en Suisse, droit de voisinage, aménagement du territoire (opposition), défauts de construction, permis de construire, droit pénal, droit administratif, poursuites, recouvrement ou contestation de créances.</p>
-            </article>
-
-            <article id="horaires" class="article__horaires">
-              <h3>
-                La Permanence ne reçoit plus dans ses locaux en raison de la pandémie
-              </h3>
-              <h6>
-                Nous avons toutefois décidé de conserver <span>le service de consultation par courriel et téléphone</span> afin de répondre à vos besoins.
-              </h6>
-          </article>
-
-          <!-- Horaire hors pandémie
-          <article class="article__horaires">
-              <div class="article__open--col">
-                  <h4>Consultations sans rendez-vous :</h4>
-                  <div>
-                      <p>Tous les jours de 11:30 à 13:30 heures</p>
-                      <p>Mardi, jeudi également de 17:00 à 19:00 heures</p>  
-                  </div>
-
-              </div>
-              <div>
-                  <p>En dehors des heures d'ouverture ci-dessus, il est tout-à-fait possible d'obtenir des consultations sur rendez-vous.
-              </div>
-          </article>
-          -->
-
-          <article class="article__procedure">
-            <p>
-              <u>La procédure est la suivante:</u>
-            </p>
-            <p>
-                1- Vous payez un montant de CHF 50.- sur le compte de la Permanence: <span>Banque Migros, compte CH36 0840 1000 06017585 0 au nom de Permanence juridique du Sud fribourgeois Sàrl</span>
-            </p>
-            <p>
-                2- Vous nous adressez par courriel à <a href="mailto:info@pjsf.ch">info@pjsf.ch</a> une copie de la preuve de votre paiement (récépissé postal, avis de débit bancaire) ainsi que tous documents utiles pour analyser votre problème.
-            </p>
-            <p>
-                3- Vous n’oubliez pas de mentionner dans votre courriel votre numéro de téléphone ainsi que les heures auxquelles vous êtes disponibles (si possible pendant les heures de bureau).
-            </p>
-            <p>
-                4- Un des avocats de la permanence vous contactera soit par courriel soit par téléphone pour vous livrer son analyse de votre problème et discuter avec vous.
-            </p>
-            <p>
-              Dans l’hypothèse où votre cas serait trop compliqué pour être traité selon cette procédure, nous nous réservons la possibilité de traiter votre cas lors d’un rendez-vous qui sera fixé d’un commun accord.
-            </p>               
-        </article>
-
-        </section>      
+    <main class="main">
+      <p>hello world</p>
     </main>
 
-    <aside id="adresse" role="complementary">
-      <section>
-          <div class="article__address">
-              <address itemscope itemtype="http://schema.org/Organization">
-                  <p itemprop="name">Permanence juridique du Sud fribourgeois Sàrl</p>
-                  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                      <p  itemprop="streetAddress">Rue de Gruyères 28</p>
-                      <p><span itemprop="postalCode">1630</span> <span itemprop="addressLocality">Bulle</span></p>
-                  </div>
-                      <p>Tel : <a href="tel:+41269121925"  itemprop="telephone">+41 26 912 19 25</a></p>
-                      <a href="mailto:info@pjsf.ch"  itemprop="email">info@pjsf.ch</a>                    
-              </address>
-        
-              <figure class="figure__one">
-                  <img src="assets/images/vue.jpg" alt="Vue du bâtiment de la rue de gruyères 28">  
-              </figure>          
-              <figure class="figure_two">
-                  <a href="https://maps.google.ch/maps/ms?msid=211756028618545430061.0004d7f4e214674bdbd77&msa=0" target="_blank" title="plan d'accès à la permanence juridique">
-                      <img src="assets/images/carte.jpg" alt="Plan d'accès à la permanence" />
-                  </a>  
-              </figure>
-          </div>
-          <p>Situation: la permanence juridique se situe au deuxième étage de la Rue de Gruyères 28.</p>
-      </section>
-    </aside>
-
-    <footer role="contentinfo">
-        <p class="text-xs-center">Permanence juridique du Sud fribourgeois Sàrl  &copy; 2013</p>
+    <footer class="footer">
+        <p class="text-xs-center">composant menu</p>
     </footer> 
-      <!-- webdesign  :   https://merveille.ch -->
   </body>
 </html>

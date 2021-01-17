@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(auto);
+  grid-template-rows: repeat(auto);
+  grid-template-areas: 
+  'nav nav nav'
+  'banner banner banner'
+  'main main main'
+  'footer footer footer';
+
+  header.banner {
+    grid-area: banner;
+  }
+
+  nav.navigation {
+    grid-area: nav;
+  }
+
+  main.main {
+    grid-area: main;
+  }
+
+  footer.footer {
+    grid-area: footer;
+  }
+}
+
+@include md {
+  body {
+  grid-template-areas: 
+  'banner banner banner'
+  'nav nav nav'
+  'main main main'
+  'footer footer footer';
+  }
+}

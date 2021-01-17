@@ -1,42 +1,26 @@
 // one file to rule them all
-
+@charset 'utf-8';
 // mixins
-@import 'mixins/elevations';
-@import 'mixins/typo-mix';
-@import 'mixins/backgrounds';
+@import 'mixins-variables/elevations';
+@import 'mixins-variables/typo-mix';
+@import 'mixins-variables/backgrounds';
+@import 'mixins-variables/mixins';
 // 
 @import 'root/root';
 @import 'vendors/normalize';
+@import 'root/html';
 
-html {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    // font
-    font-family: var(--font-family);
-    font-size: 62.5%;
-    line-height: 1.6;
-
-    // color
-    background-color: var(--white);
-    color: var(--gray-7);
-
-    // 
-    margin: 0;
-    padding: 0;
-}
+@import 'templates/grid';
 @import 'atoms/typo';
 @import 'atoms/icon';
 @import 'atoms/figure';
 @import 'atoms/menu';
+@import 'atoms/banner';
 
-@import 'organisms/nav';
-
-@import 'organisms/aside';
+// @import 'organisms/nav';
+@import 'organisms/main';
 @import 'organisms/footer';
 
-
-@import 'layout/layout__sm';
-@import 'layout/layout__lg';
+// @import 'organisms/aside';
+// @import 'layout/layout__sm';
+// @import 'layout/layout__lg';
