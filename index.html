@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Permanence juridique du Sud fribourgeois Sàrl</title>
+    <meta name="description" content="Consultation sans rendez-vous du lundi au samedi : droit de la famille (séparation, divorces); successions; droit du travail; droit du bail; assurances; accidents de la circulation; retrait de permis de conduire; autorisations de séjour en suisse; droit de voisinage; aménagement du territoire (opposition); défauts de construction; permis de construire; droit pénal; droit administratif; poursuites; recouvrement ou contestation de créances.">
+    <meta name="author" content="Permanence juridique du Sud fribourgeois Sàrl" >
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js"></script>
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="pjsf">        
+    <link rel="shortcut icon" href="./favicon.png">
+  </head>
+  <body>
+    <!-- some svg -->
+    <svg style="display: none;">
+      <defs>
+        <symbol id="ic--add">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        </symbol>
+        <symbol id="ic--clear">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </symbol>
+        <symbol id="ic--create">
+          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+        </symbol>
+        <symbol id="ic--date-range">
+          <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+        </symbol>
+        <symbol id="ic--delete">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+        </symbol>
+        <symbol id="ic--done">
+          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+        </symbol>        
+        <symbol id="ic--favorite">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </symbol>
+        <symbol id="ic--menu">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </symbol>
+        <symbol id="ic--search">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </symbol>
+        <symbol id="ic--face"> <!-- height & width = 15 -->
+          <path d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82708 7.49972C1.82708 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82708 10.6327 1.82708 7.49972ZM5.03747 9.21395C4.87949 8.98746 4.56782 8.93193 4.34133 9.08991C4.11484 9.24789 4.05931 9.55956 4.21729 9.78605C4.93926 10.8211 6.14033 11.5 7.50004 11.5C8.85974 11.5 10.0608 10.8211 10.7828 9.78605C10.9408 9.55956 10.8852 9.24789 10.6587 9.08991C10.4323 8.93193 10.1206 8.98746 9.9626 9.21395C9.41963 9.99238 8.51907 10.5 7.50004 10.5C6.481 10.5 5.58044 9.99238 5.03747 9.21395ZM5.37503 6.84998C5.85828 6.84998 6.25003 6.45815 6.25003 5.97498C6.25003 5.4918 5.85828 5.09998 5.37503 5.09998C4.89179 5.09998 4.50003 5.4918 4.50003 5.97498C4.50003 6.45815 4.89179 6.84998 5.37503 6.84998ZM10.5 5.97498C10.5 6.45815 10.1083 6.84998 9.62503 6.84998C9.14179 6.84998 8.75003 6.45815 8.75003 5.97498C8.75003 5.4918 9.14179 5.09998 9.62503 5.09998C10.1083 5.09998 10.5 5.4918 10.5 5.97498Z">
+        </symbol>
+      </defs>
+    </svg>
+    <!-- // -->
+
+    <nav role="navigation">
+      <div class="navigation__icon">
+        <div id="burger-open">
+          <svg class="icon icon--menu"  viewBox="0 0 24 24" >
+            <use xlink:href="#ic--menu">
+          </svg>          
+        </div>
+        <div id="burger-close">
+          <svg class="icon icon--delete"  viewBox="0 0 24 24" >
+            <use xlink:href="#ic--clear">
+          </svg>
+        </div>
+
+      </div>
+      <ul id="menu-nav" class="navigation__menu">
+        <li><a href="#activites">Activités</a></li>
+        <li><a href="#horaires">horaires</a></li>
+        <li><a href="#adresse">adresse</a></li>
+        <li><a href="mailto:info@pjsf.ch">info@pjsf.ch</a></li>
+      </ul>
+    </nav>
+
+    <header role="banner">
+      <figure class="banner__image">
+        <img src="assets/images/logo.jpg" alt="Permanence juridique du Sud fribourgeois Sàrl">
+      </figure>
+      <div class="banner__body">
+        <p>Vous cherchez une réponse rapide à un problème légal ?</p>
+        <p>Un avocat pour vous conseiller, pour vous aider ...</p>
+      </div>
+      <div class="banner__links">
+        <a href="mailto:info@pjsf.ch">info@pjsf.ch</a>
+        <a href="tel:+41269121925">Tel : +41 26 912 19 25</a>
+      </div>                        
+    </header>
+
+    <main role="main">
+        <section>
+            <article id="activites" class="article__desc">
+                <h1>Consultation juridique sans rendez-vous</h1>
+                <h2>CHF 50.- la consultation de 30 minutes</h2>            
+                <h3>Nous vous conseillons dans tous les domaines, notamment:</h3>
+                <p>Droit de la famille (séparation, divorces), successions, droit du travail, droit du bail, assurances, accidents de la circulation, retrait de permis de conduire, autorisations de séjour en Suisse, droit de voisinage, aménagement du territoire (opposition), défauts de construction, permis de construire, droit pénal, droit administratif, poursuites, recouvrement ou contestation de créances.</p>
+            </article>
+
+            <article id="horaires" class="article__horaires">
+              <h3>
+                La Permanence ne reçoit plus dans ses locaux en raison de la pandémie
+              </h3>
+              <h6>
+                Nous avons toutefois décidé de conserver <span>le service de consultation par courriel et téléphone</span> afin de répondre à vos besoins.
+              </h6>
+          </article>
+
+          <!-- Horaire hors pandémie
+          <article class="article__horaires">
+              <div class="article__open--col">
+                  <h4>Consultations sans rendez-vous :</h4>
+                  <div>
+                      <p>Tous les jours de 11:30 à 13:30 heures</p>
+                      <p>Mardi, jeudi également de 17:00 à 19:00 heures</p>  
+                  </div>
+
+              </div>
+              <div>
+                  <p>En dehors des heures d'ouverture ci-dessus, il est tout-à-fait possible d'obtenir des consultations sur rendez-vous.
+              </div>
+          </article>
+          -->
+
+          <article class="article__procedure">
+            <p>
+              <u>La procédure est la suivante:</u>
+            </p>
+            <p>
+                1- Vous payez un montant de CHF 50.- sur le compte de la Permanence: <span>Banque Migros, compte CH36 0840 1000 06017585 0 au nom de Permanence juridique du Sud fribourgeois Sàrl</span>
+            </p>
+            <p>
+                2- Vous nous adressez par courriel à <a href="mailto:info@pjsf.ch">info@pjsf.ch</a> une copie de la preuve de votre paiement (récépissé postal, avis de débit bancaire) ainsi que tous documents utiles pour analyser votre problème.
+            </p>
+            <p>
+                3- Vous n’oubliez pas de mentionner dans votre courriel votre numéro de téléphone ainsi que les heures auxquelles vous êtes disponibles (si possible pendant les heures de bureau).
+            </p>
+            <p>
+                4- Un des avocats de la permanence vous contactera soit par courriel soit par téléphone pour vous livrer son analyse de votre problème et discuter avec vous.
+            </p>
+            <p>
+              Dans l’hypothèse où votre cas serait trop compliqué pour être traité selon cette procédure, nous nous réservons la possibilité de traiter votre cas lors d’un rendez-vous qui sera fixé d’un commun accord.
+            </p>               
+        </article>
+
+        </section>      
+    </main>
+
+    <aside id="adresse" role="complementary">
+      <section>
+          <div class="article__address">
+              <address itemscope itemtype="http://schema.org/Organization">
+                  <p itemprop="name">Permanence juridique du Sud fribourgeois Sàrl</p>
+                  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                      <p  itemprop="streetAddress">Rue de Gruyères 28</p>
+                      <p><span itemprop="postalCode">1630</span> <span itemprop="addressLocality">Bulle</span></p>
+                  </div>
+                      <p>Tel : <a href="tel:+41269121925"  itemprop="telephone">+41 26 912 19 25</a></p>
+                      <a href="mailto:info@pjsf.ch"  itemprop="email">info@pjsf.ch</a>                    
+              </address>
+        
+              <figure class="figure__one">
+                  <img src="assets/images/vue.jpg" alt="Vue du bâtiment de la rue de gruyères 28">  
+              </figure>          
+              <figure class="figure_two">
+                  <a href="https://maps.google.ch/maps/ms?msid=211756028618545430061.0004d7f4e214674bdbd77&msa=0" target="_blank" title="plan d'accès à la permanence juridique">
+                      <img src="assets/images/carte.jpg" alt="Plan d'accès à la permanence" />
+                  </a>  
+              </figure>
+          </div>
+          <p>Situation: la permanence juridique se situe au deuxième étage de la Rue de Gruyères 28.</p>
+      </section>
+    </aside>
+
+    <footer role="contentinfo">
+        <p class="text-xs-center">Permanence juridique du Sud fribourgeois Sàrl  &copy; 2013</p>
+    </footer> 
+      <!-- webdesign  :   https://merveille.ch -->
+  </body>
+</html>

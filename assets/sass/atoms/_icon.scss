@@ -1,0 +1,9 @@
+.icon {
+  fill: var(--gray-6);
+  width: 10px;
+  height:10px;
+  width: clamp(5vw,10px, 30vw);
+  height: clamp(5vw,10px, 30vw);
+  margin-right: 0;
+  padding: 0;
+}

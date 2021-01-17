@@ -1,0 +1,113 @@
+[role=complementary] {
+  background-color: var(--coconut);
+
+  section {
+        padding: 0 .5em;
+        
+        .article__address {
+          display: grid;
+          grid-template-areas: 
+          "a1"
+          "a3"
+          "a2"; 
+          grid-gap: 1rem 0;
+
+            address {
+              grid-area: a1;
+              display: flex;
+              flex-direction: column;
+              line-height: 2;
+
+                [itemprop=name] {
+                    font-weight: 700;
+                }
+
+                [itemprop=email] {
+                  text-align: center;
+              }
+
+                p{
+                    margin: 0;
+                    padding: 0;
+                    @include p;
+                    font-style: normal;
+
+                    [itemprop=telephone] {
+                        text-decoration: none;
+                        color: var(--blue);
+
+                        &:hover {
+                            color: var(--black);
+                        }
+                    }
+                    span[itemprop=faxNumber] {
+                        text-decoration: none;
+                    }
+                }
+
+                [itemprop=email] {
+                    font-style: normal;    
+                    color: var(--blue);
+                    text-decoration: none;
+                    text-align: center;
+
+                    &:hover, :focus {
+                        text-decoration: none;                      
+                    }
+
+                }
+            }
+          
+          
+            .figure__one {
+              grid-area: a2;
+            }
+
+            .figure__two {
+              grid-area: a3;
+            }
+
+        }
+        p {
+          @include p;
+          margin: 0;
+          padding: {
+            left: .25rem;
+            top: .5rem;
+            right: .25rem;
+            bottom: .5rem; 
+          }
+        }
+    }
+
+}
+
+@media screen and (min-width: 425px) {
+  [role=complementary] {
+ 
+    section {       
+      width: 98vw;
+      margin: 0 auto;
+      padding: 0;
+      padding-top: 3em;
+      }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  [role=complementary] {
+ 
+    section {       
+        .article__address {
+          display: grid;
+          grid-template-areas: 
+          "a1 a2 a3"; 
+          grid-gap: 0 .5rem;
+        }
+      }
+      p {
+        padding: 0;
+    }
+  }
+
+}

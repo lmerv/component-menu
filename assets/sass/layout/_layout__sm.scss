@@ -1,0 +1,160 @@
+[role=banner] {
+    @include bg1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .banner__image {
+      width: 90vw;
+      margin: {
+        left: auto;
+        top: 1.5rem;
+        right: auto;
+        bottom: 0;
+      }
+      img {
+        &:hover, &:focus {
+          transform: none;
+        }
+      }
+    }
+
+    .banner__body {
+            width: 90vw;
+            margin: {
+              left: auto;
+              top: 1rem;
+              right: auto;
+              bottom: 0;
+            }
+            padding: 2em;
+            color: var(--gray-5);
+            display: flex;
+            flex-direction: row;   
+            flex-wrap: wrap;     
+            justify-content: space-between; 
+            
+            *:nth-child(1n + 1) {
+                display: none;
+            }
+        }
+
+    .banner__links {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        a {
+            @include h6;
+            background-color: var(--blue);
+            color:var(--gray-4);
+            font-style: normal;
+            text-decoration: none;
+            // 
+            border-radius: 5px;
+            //@include z24;
+            padding: .5em .5em;
+            margin: 5%;
+
+            &:hover, :focus {
+                text-decoration: none;
+                color:var(--gray-5);
+            }
+        }
+    }
+}
+
+[role=main] {
+    width: 100%;
+
+    section {
+        padding: 0 .5em;
+
+        .article__danger {
+            text-align: center;
+            
+            h3 {
+                color: var(--red);
+                @include h5;
+            }
+        }
+
+        .article__desc {    
+            h1 {
+                @include h4;
+            }
+            h2 {
+                @include h5;
+                color: var(--blue);
+            }
+            h3 {
+             @include h5;    
+            }
+            p {
+                text-align: justify;
+            }
+        }
+
+        .article__horaires {
+            @include z5;
+            padding: 1rem;                
+          > h3 {
+              @include h5;
+          }
+          > h6 > span {
+            color: var(--red);
+          }
+        }
+
+        .article__procedure {
+          p {
+            margin: 0;
+            padding: {
+              left: 1em;
+              top: .5em;
+              right: 1em;
+              bottom: .5em;
+            }
+              
+            span {
+                display: block;
+                color: var(--black);
+                padding: 1em;
+            }
+            &:first-child {
+                font-size: var(--step-1);
+                padding: {
+                  left: 0;
+                }
+            }
+
+            &:nth-child(even) {
+            background-color: var(--gray-2);
+
+            }
+          }
+        }
+        
+        .article__open {
+            &--col {
+                h4 {
+                    @include h5;
+                }
+            }
+            p {
+                text-align: justify;
+            }
+        }
+
+        .article__desc, .article__procedure, .article__open, .article__danger {
+          margin: {
+            bottom: 5vw;
+          }
+        }
+    
+    }
+}
+

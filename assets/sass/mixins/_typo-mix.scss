@@ -1,0 +1,29 @@
+// mixin typo
+
+@mixin h1 {
+    font-size: var(--step-6);
+}
+@mixin h2 {
+    font-size: var(--step-5);
+}
+@mixin h3 {
+    font-size: var(--step-4);
+}
+@mixin h4 {
+    font-size: var(--step-3);
+}
+@mixin h5 {
+    font-size: var(--step-2);
+}
+@mixin h6 {
+    font-size: var(--step-1);
+}
+@mixin h7 {
+    font-size: var(--step--1);
+}
+@mixin h8 {
+    font-size: var(--step--2);
+}
+@mixin p {
+    font-size: var(--step-0);
+}

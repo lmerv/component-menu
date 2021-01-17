@@ -1,0 +1,127 @@
+@media screen and (min-width: 425px) {
+    [role=banner] {
+        
+        .banner__body {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2em;
+            color: var(--gray-5);
+            // 
+            display: flex;
+            flex-direction: row;   
+            flex-wrap: wrap;     
+            justify-content: space-between; 
+
+            a {
+                @include h6;
+                // width: 20%;
+                background-color: var(--blue);
+                color:var(--gray-4);
+                font-style: normal;
+                text-decoration: none;
+                // 
+                border-radius: 5px;
+                //@include z24;
+                padding: 1em 1.8em;
+                margin: 5%;
+
+                &:hover, :focus {
+                    text-decoration: none;
+                    color:var(--gray-5);
+                }
+            }
+            
+            *:nth-child(1n + 1) {
+                display: block;
+                @include h5;
+                margin: 0;
+                margin-bottom: 1em;
+            }
+            *:nth-child(3) {
+                @include h6;
+                margin-top: 1em;
+
+                a {
+                    margin: 0;
+                }
+            }
+
+            &--links {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between; 
+                align-items: center;          
+            }
+
+        }
+
+        .banner__links {
+            width: 100%;
+            //
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            a {
+                @include h6;
+                background-color: var(--blue);
+                color:var(--gray-4);
+                font-style: normal;
+                text-decoration: none;
+                // 
+                border-radius: 5px;
+                //@include z24;
+                padding: 1em 1em;
+                margin: 5%;
+    
+                &:hover, :focus {
+                    text-decoration: none;
+                    color:var(--gray-5);
+                }
+            }
+        }       
+    }
+    [role=main] {
+
+        section {
+            width: 80%;
+            margin: 0 auto;
+            padding:0;
+            padding: 3em 0;
+
+            .article__open {
+                margin-bottom: 2rem;
+
+                h3 {
+                    @include h4;
+                }
+
+                h4 {
+                    @include h5;
+                }
+
+                &--col {
+                    display: flex;
+                    flex-direction: row;   
+                    flex-wrap: wrap;     
+                    justify-content: start; 
+                    text-align: left;
+
+                    h4 {
+                        vertical-align: top;
+                        @include h6;
+                        text-decoration: underline;
+                        margin: 0 2em 0 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
+

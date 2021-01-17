@@ -1,0 +1,23 @@
+figure {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  img {
+    @include z4;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    
+    &:hover, &:focus {
+      @include z10;
+      transform: scale(1.05);
+      opacity: .8;
+      transition: opacity .2s ease-in-out;
+      transition: scale .2s ease-in-out;
+    }
+  }
+}
