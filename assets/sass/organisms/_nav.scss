@@ -27,9 +27,9 @@ ul.navigation {
       text-align: center;
       //background-color: lighten(#{$item-a-color}, 100%); bof
 
-      &:hover {
+      // &:hover {
                 
-      }
+      // }
 
       a {
         font: {
@@ -40,10 +40,10 @@ ul.navigation {
         text-decoration: none;
         padding: 15px 5px;
         
-        &:hover,
-        &:focus {
-          color: darken(#{$item-a-color}, 20%);
-        }
+        // &:hover,
+        // &:focus {
+        //   // color: darken(black, 2);
+        // }
       }
     }
 
