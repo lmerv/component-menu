@@ -1,66 +1,51 @@
+// NAVIGATION
+//  menu
 
-nav.navigation {
+// VARIABLES
+$item-a-color: var(--gray-6);
+
+ul.navigation {
   display: flex;
-  flex: wrap;
-  background-color: inherit;
-  width: 100%;
 
-  ul.navigation__menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
+  &__menu {
 
+    &.is--open {
+      height: 100vh;
+      margin: {
+        left: 0;
+        top: calc(#{$menu-icon-height} + 1rem);
+        right: 0;
+        bottom: 0;
+      }
+    }
 
-    li {
-      text-align: center;      
-      width: clamp(10vw, 150px, 20vw);
+    &:not(.is--open) {
+      display: none;
+    }
+
+    > li.item {
+      text-align: center;
+      //background-color: lighten(#{$item-a-color}, 100%); bof
+
+      &:hover {
+                
+      }
 
       a {
-        @include h7;
+        font: {
+          size: var(--step-0);
+        }
         display: block;
-        color: var(--gray-6);
+        color: $item-a-color;
         text-decoration: none;
-        text-transform: uppercase;
-
-        &:hover {
-          color: var(--gray-3);
+        padding: 15px 5px;
+        
+        &:hover,
+        &:focus {
+          color: darken(#{$item-a-color}, 20%);
         }
       }
-
-    }
-  }
-
-  .navigation__icon {
-    padding: {
-      left: 1rem;
-      top: 1rem;
-      right: 1rem;
-      bottom: .1rem;
-    }
-  }
-
-}
-
-@include md {
-  nav.navigation {
-    align-items: center;
-    height: clamp(8vh, 5px, 10vh);
-
-    .navigation__icon {
-      .icon--menu {
-        display: none;
-      }
-
-      .icon--delete {
-        display: none;
-      }
     }
 
-    ul.navigation__menu {
-      flex-direction: row;
-    }
   }
 }
-

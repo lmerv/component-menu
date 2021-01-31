@@ -1,0 +1,60 @@
+// ICONE HAMBURGER MENU ANIMATION
+// VARIABLES: 
+
+$divider: 3;
+$menu-icon-color: var(--gray-6);
+$menu-icon-width: calc(100px / #{$divider});
+$menu-icon-height: calc(100px / #{$divider});
+$menu-icon-line-height: calc(10px / #{$divider});
+$menu-icon-margin-bottom: calc(20px / #{$divider});
+$menu-icon-transition: all 1s;
+$menu-icon-rotate-angle: 0.125;
+
+
+.navigation {
+
+  &__icon {
+    float: right;
+    margin-right: 2vw;
+    cursor: pointer;
+    width: $menu-icon-width;
+    height: $menu-icon-height;
+
+    &--height {
+      height: $menu-icon-height;
+      margin: {
+        left: 0;
+        top: 1rem;
+        right: 1rem;
+        bottom: 0;
+      }
+    }
+
+    .line {
+      background: $menu-icon-color;
+      height: $menu-icon-line-height;
+      margin-bottom: $menu-icon-margin-bottom;
+      transition: $menu-icon-transition;
+      width: 100%;
+    }
+
+    &.menu--open {
+      .line1 {
+        transform: rotate(45deg) translate(0, calc(40px / #{$divider}));
+      }
+      .line2 {
+        opacity: 0;
+      }
+      .line3 {
+        transform: rotate(-45deg) translate(0, calc(-40px / #{$divider}));
+      }
+    }
+    
+    &.icon--hidden {
+      display: none;
+    }
+  }
+}
+
+
+
