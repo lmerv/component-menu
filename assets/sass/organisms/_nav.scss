@@ -1,51 +1,26 @@
 // NAVIGATION
 //  menu
 
-// VARIABLES
-$item-a-color: var(--gray-6);
-
-ul.navigation {
+ ul.navigation {
   display: flex;
 
-  &__menu {
+  &--vertical {
 
-    &.is--open {
-      height: 100vh;
-      margin: {
-        left: 0;
-        top: calc(#{$menu-icon-height} + 1rem);
-        right: 0;
-        bottom: 0;
-      }
-    }
-
-    &:not(.is--open) {
-      display: none;
-    }
-
-    > li.item {
-      text-align: center;
-      //background-color: lighten(#{$item-a-color}, 100%); bof
-
-      // &:hover {
-                
-      // }
-
-      a {
-        font: {
-          size: var(--step-0);
+      &.is--open {
+        height: 100vh;
+        margin: {
+          left: 0;
+          top: calc(#{$menu-icon-height} + 1rem);
+          right: 0;
+          bottom: 0;
         }
-        display: block;
-        color: $item-a-color;
-        text-decoration: none;
-        padding: 15px 5px;
-        
-        // &:hover,
-        // &:focus {
-        //   // color: darken(black, 2);
-        // }
+      }
+
+      &:not(.is--open) {
+        display: none;
       }
     }
 
-  }
+
+
 }

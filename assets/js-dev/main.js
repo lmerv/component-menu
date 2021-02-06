@@ -1,8 +1,8 @@
-function test(){
-  console.log('hello world john');
-};
+// Main.js
+// on doit le passer par babel pour ecma 
 
-let hamburgerIcon = function(){
+let hamburgerIcon = function()
+{
   var hamburger = document.querySelector('.navigation__icon')
   var menu = document.querySelector('.navigation__menu')
   hamburger.addEventListener('click', function() {
@@ -11,57 +11,48 @@ let hamburgerIcon = function(){
   });
 };
 
-let menuMobileWindowSize = function() {
-    if( window.matchMedia("(min-width: 900px)").matches )
+let subMenu = function() 
+{
+  var subMenuClose = document.querySelectorAll('.submenu--close');
+  subMenuClose.forEach
+  (
+    item => 
     {
-      console.log('test resize)');
+      item.addEventListener
+      (
+        'click', event => 
+        {
+          if(item.hasAttribute('class', 'submenu--close')) {
+            item.removeAttribute('class', 'submenu--close');
+          } else {
+            item.setAttribute('class', 'submenu--close');
+          }          
+        }
+      )
+    }
+  )
+}
+
+let menuMobileWindowSize = function() 
+{
+    if( window.matchMedia("(min-width: 798px)").matches )
+    {
       document.querySelector('.navigation__icon').classList.add('icon--hidden');
-    } else {
+      document.querySelector('.navigation__menu').classList.remove('navigation--vertical');
+      document.querySelector('.navigation__menu').classList.add('navigation--horizontal');
+      } else {
       document.querySelector('.navigation__icon').classList.remove('icon--hidden');
+      document.querySelector('.navigation__menu').classList.add('navigation--vertical');
+      document.querySelector('.navigation__menu').classList.remove('navigation--horizontal');
     }  
 };
 
 window.onload = function() {
-  //mobileMenuOpenScript();
-  //test();
   hamburgerIcon();
+  subMenu();
   menuMobileWindowSize();
 };
 
 window.onresize = function() {
   menuMobileWindowSize();
 };
-
-// let menuMobileWindowSize = function() {
-//   var open__menu = document.getElementById('burger-open');
-//   var close__menu = document.getElementById('burger-close');
-//   var nav__menu = document.getElementById('menu-nav');
-//   // console.log('resize');
-//     if( window.matchMedia("(min-width: 900px)").matches )
-//     {
-//       // console.log('test resize)');
-//       nav__menu.style.display = '';
-//     }
-// };
-
-// let mobileMenuOpenScript = function() {
-//   var open__menu = document.getElementById('burger-open');
-//   var close__menu = document.getElementById('burger-close');
-//   var nav__menu = document.getElementById('menu-nav');
-
-  
-//   open__menu.onclick = function() {
-//     // console.log('Open that menu');
-  
-//     nav__menu.style.display = '';
-//     open__menu.style.display = 'none';
-//     close__menu.style.display ='';
-//   };
-
-//   close__menu.onclick = function() {
-//     // console.log('Close that menu');
-//     nav__menu.style.display = 'none';
-//     open__menu.style.display = '';
-//     close__menu.style.display ='none';
-//   };
-// };

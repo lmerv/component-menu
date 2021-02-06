@@ -5,6 +5,47 @@ ul, ol {
   list-style: none;
 }
 
+// VARIABLES
+$item-a-color: var(--gray-6);
+
+ul.navigation {
+
+  &--vertical {
+
+      li.item {
+        text-align: center;
+
+        a, span {
+          font: {
+            size: var(--step-0);
+          }
+          display: block;
+          color: $item-a-color;
+          text-decoration: none;
+          padding: 15px 5px;
+        }
+
+        span {
+          cursor: pointer;
+
+          &.submenu--close {
+          +.submenu {
+              display: none;
+            }
+          }
+        }
+      }  
+      
+    }
+
+  &--horizontal {
+    display: flex;
+    
+  }
+  }
+
+
+
 // // // Menu Top
 // .item {
 //   padding: 10px;
