@@ -22,9 +22,11 @@ let subMenu = function()
       (
         'click', event => 
         {
-          if(item.hasAttribute('class', 'submenu--close')) {
+          if(item.hasAttribute('class', 'submenu--close')) 
+          {
             item.removeAttribute('class', 'submenu--close');
-          } else {
+          } else
+          {
             item.setAttribute('class', 'submenu--close');
           }          
         }

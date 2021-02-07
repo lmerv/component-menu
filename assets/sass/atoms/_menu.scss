@@ -40,9 +40,40 @@ ul.navigation {
 
   &--horizontal {
     display: flex;
+    flex-direction: row;
+
+    li.item {
+      text-align: center;
+
+      a, span {
+        font: {
+          size: var(--step-0);
+        }
+        display: block;
+        color: $item-a-color;
+        text-decoration: none;
+        padding: 15px 5px;
+      }
+
+      span {
+        cursor: pointer;
+
+        +ul.submenu {
+          z-index: 9999;
+          display: block;
+
+        }
+
+        &.submenu--close {
+        +.submenu {
+            display: none;
+          }
+        }
+      }
+    }  
     
   }
-  }
+}
 
 
 

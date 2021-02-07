@@ -1,6 +1,21 @@
 // NAVIGATION
 //  menu
 
+$bg-nav: white;
+
+nav.navigation {
+  background-color: $bg-nav;
+  
+  > .navigation--vertical {
+    width: 100%;
+  }
+
+  > .navigation--horizontal {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
  ul.navigation {
   display: flex;
 
