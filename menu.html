@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Composant Menu : codepan</title>
+    <style>
+
+.menu-toggle {
+  display: inline-block;
+}
+@media (min-width: 900px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  background: #4f2683;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 900px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.menu.open {
+  display: block;
+}
+.menu > li > a, .menu > li > .dropdown-toggle {
+  display: block;
+  width: 100%;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-align: left;
+  color: #fff;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+}
+@media (min-width: 900px) {
+  .menu > li > a, .menu > li > .dropdown-toggle {
+    display: inline-block;
+    width: auto;
+  }
+}
+.menu > li > a:hover, .menu > li > a:focus, .menu > li > .dropdown-toggle:hover, .menu > li > .dropdown-toggle:focus {
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+}
+.menu [aria-current=page]::after {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3px;
+  font-size: 0.5em;
+  content: "♦";
+}
+.menu [target=_blank]::after {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3px;
+  font-size: 0.5em;
+  content: "Ξ";
+}
+
+.dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0.25em;
+  border-color: #fff transparent transparent transparent;
+  transition: transform 0.2s ease-in-out;
+}
+.dropdown-toggle:hover::after, .dropdown-toggle:focus::after {
+  border-top-color: #000;
+}
+
+.dropdown-menu {
+  display: none;
+  background: #fff;
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 900px) {
+  .dropdown-menu {
+    position: absolute;
+    box-shadow: 5px 5px 5px #0005;
+    top: 100%;
+    left: 0;
+    width: 10em;
+  }
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #000;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: #eee;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown.open .dropdown-toggle {
+  background: #fff;
+  color: #000;
+}
+.dropdown.open .dropdown-toggle::after {
+  transform: rotate(180deg);
+  border-top-color: #000;
+}
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+    </style>
+  </head>
+  <body>
+    <header class="banner">
+      <p>Hello world</p>
+    </header>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <button class="menu-toggle" id="menu-toggle" aria-controls="menu" aria-expanded="false">
+        Main menu
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="#" aria-current="page" title="Current page">Home</a></li>
+        <li><a href="#">A thing</a></li>
+        <li><a href="#">Another thing</a></li>
+        <li class="dropdown">
+          <button class="dropdown-toggle" type="button" id="a-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            A dropdown
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="a-dropdown-toggle">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <button class="dropdown-toggle" type="button" id="another-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Another dropdown
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="another-dropdown-toggle">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+          </ul>
+        </li>
+        <li><a href="https://google.com/" target="_blank" rel="noopener noreferrer" title="Opens in new tab">Google</a>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <p>hello world</p>
+      <p>arrow &#8250;</p>
+      <p>&#129171;</p>
+      <p>&#129169;</p>
+      <p>
+        <span aria-hidden="true" data-icon="&#x21dd;"></span>hello
+        <span aria-hidden="true" data-icon=""></span>hello
+      </p>
+      <p>
+        <svg class="icon" viewBox="0 0 24 24" >
+          <use xlink:href="#ic--arrow-down" />
+        </svg>
+      </p>
+      <p>
+        exemple à voir : <a href="https://codepen.io/scottblinch/pen/gzdKyd">menu dropdown vanilla js</a>
+      </p>
+
+
+      <ul class="navigation__menu">
+        <li>hello footer</li>
+      </ul>
+    </main>
+
+    <footer class="footer">
+        <p class="text-xs-center">composant menu</p>
+    </footer> 
+    <script>
+      // We only need this javascript if we want the perks of being
+// able to group links into dropdown menus and if we want
+// to be able hide away the menu on mobile until it's 
+// opened by the user. If your nav's needs are simpler,
+// you don't have to bother with any of this.
+
+// go through the nodelist and run the function on each node
+// this is so we don't have to do a silly for loop every time
+const forEach = (nodeList, callback, scope) => {
+  for (let index = 0; index < nodeList.length; index++) {
+    callback.call(scope, nodeList[index], index);
+  }
+};
+
+// hide and show the main menu on mobile
+const toggleMenu = function toggleMenu() {
+  const menuToggle = this;
+  const menu = document.getElementById('menu');
+  
+  // if it's open, close it; if it's closed, open it
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', false);
+  } else {
+    menu.classList.add('open');
+    menuToggle.setAttribute('aria-expanded', true);
+  }
+};
+
+// get the dropdown toggle from the dropdown
+const getDropdownToggle = dropdown => dropdown.querySelector('.dropdown-toggle');
+
+// open the dropdown
+const openDropdown = (dropdown) => {
+  const dropdownToggle = getDropdownToggle(dropdown);
+  // there is no sibling selector, so we jump to the parent and do a query
+  const openSiblingDropdowns = dropdown.parentNode.querySelectorAll('.dropdown.open');
+  
+  // first we'll close the other open dropdowns
+  forEach(openSiblingDropdowns, (dropdown) => closeDropdown(dropdown, false));
+  
+  // finally, set aria-expanded to true and add the open class
+  dropdownToggle.setAttribute('aria-expanded', true);
+  dropdown.classList.add('open');
+};
+
+// close the dropdown
+const closeDropdown = (dropdown, moveFocus = true) => {
+  const dropdownToggle = getDropdownToggle(dropdown);
+  
+  // set aria-expanded to false and remove the open class
+  dropdownToggle.setAttribute('aria-expanded', false);
+  dropdown.classList.remove('open');
+  
+  // move the focus back to the toggle if we're allowed to
+  if (moveFocus) {
+    dropdownToggle.focus(); 
+  }
+};
+
+// close it if it's open or open it if it's closed
+const toggleDropdown = function toggleDropdown(event) {
+  const dropdown = this.parentNode;
+  
+  event.stopPropagation();
+  
+  if (dropdown.classList.contains('open')) {
+    closeDropdown(dropdown);
+  } else {
+    openDropdown(dropdown);
+  }
+};
+
+// see ya later dropdowns
+const escapeDropdowns = (event) => {
+  // if the user clicked anywhere or hit the escape key
+  if (event.type === 'click' || 'key' in event && event.key === 'Escape') {
+    const openDropdowns = document.querySelectorAll('.dropdown.open');
+    
+    // close all the dropdowns (but don't move focus if the event was a click)
+    forEach(openDropdowns, (dropdown) => closeDropdown(dropdown, event.type !== 'click'));
+  }
+};
+
+// hello world
+const readySetNavigate = () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  
+  // add the click listener for the main menu toggle
+  menuToggle.addEventListener('click', toggleMenu);
+
+  // add the click listener for all of the dropdown toggles
+  forEach(dropdownToggles, (dropdownToggle) => {
+    dropdownToggle.addEventListener('click', toggleDropdown);
+  });
+
+  // add the escape listener to close the dropdowns
+  document.addEventListener('keyup', escapeDropdowns);
+  // add the click listener to close the dropdowns
+  document.addEventListener('click', escapeDropdowns);
+}
+
+// fire up
+readySetNavigate();
+
+    </script>
+  </body>
+</html>
